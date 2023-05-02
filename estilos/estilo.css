@@ -1,0 +1,171 @@
+/*Rodrigo Rey-N° de estudiante: 275635
+Joaquin Vega-N° de estudiante: 281835*/
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(128, 128, 128);
+}
+
+.titulo-seccion{
+    background-color: rgb(68, 68, 68);
+    color: white;
+    margin-left: 5%;
+    margin-top: 10px;
+}
+
+.agregar{
+    width: 25%;
+}
+
+label{
+    color: rgb(68, 68, 68);;
+}
+
+.contenido{
+  margin-left: 12%;
+}
+
+section{
+  background-color: white;
+  margin: auto;
+  width: 90%;
+  padding: 10px;
+  outline: solid black 2px;
+  padding-right: 0;
+  margin-top: 2px;
+}
+
+header{
+  text-align: center;
+  background-color: rgb(128, 128, 128);
+}
+
+h1{
+  margin: 0;
+  padding: 5px 0px 10px 0px;
+  color: white;
+}
+nav{
+  margin-bottom: 10px;
+}
+nav, footer{
+  background-color: darkgrey;
+  color: white;
+  margin: 0px 7px 0px 7px;
+  padding: 2px;
+}
+
+nav ul{
+  margin: 2px;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+}
+
+footer{
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+footer p{
+
+  padding: 0px;
+  margin: 0px;
+}
+a{
+  color: whitesmoke;
+  padding-right: 40px;
+}
+
+.sub-titulo{
+  color: rgb(68, 68, 68);
+}
+
+.contenedor .caja{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 40%;
+}
+
+.contenedor .caja label{
+width: 35%;
+}
+
+.contenedor .caja .entrada{
+width: 65%;
+box-sizing:border-box;
+}
+
+
+.contenedor .caja select{
+ width: 60%;
+ margin: 0px;
+ padding: 0px;
+}
+
+#p-orden{
+  margin-top: 0px;
+}
+
+#lista-sin-ofertas{
+  color: red;
+}
+
+#lista-cantidad-ofertas{
+  color: blue;
+}
+
+.foto{
+  border-radius: 50%;
+  padding:5px;
+  float: left;
+}
+
+.prueba{
+  width: 100%;
+  padding-left: 10%
+}
+
+#rubro-Consulta{
+  width: 30%;
+}
+
+.caja-orden, .info{
+  padding-left: 14%;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.parrafo{
+  float: left;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  padding-right: 5px;
+}
+
+.caja-orden .entrada{
+  margin-right: 50px;
+}
+.contenedor-rubro .caja-rubro {
+  display: flex;
+}
+table, tr, th, td{
+  border: solid black 1px;
+  text-align: center;
+}
+
+.foto, .nombre{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@media (max-width: 500px) {
+  body{
+    background-color: blue;
+    
+  }
+}

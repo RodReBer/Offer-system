@@ -1,0 +1,280 @@
+<!--Rodrigo Rey-N° de estudiante: 275635-->
+<!--Joaquin Vega-N° de estudiante: 281835-->
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <title>Prog 1</title>
+    <link href="estilos/estilo.css" rel="stylesheet" />
+    <script type="text/javascript" src="./js/clases.js"></script>
+	  <script type="text/javascript" src="./js/funciones.js"></script>
+  </head>
+  <body>
+    <header>
+      <h1>Sistema de Ofertas</h1>
+    </header>
+    
+    <nav>
+      <ul>
+        <li><a href="#datos-seccion">Datos</a></li>
+        <li><a href="#consultas-seccion">Consultas</a></li>
+        <li><a href="#equipo-seccion">Conozca al Equipo</a></li>
+      </ul>
+    </nav>
+
+    <section id="datos-seccion">
+      <h2 class="titulo-seccion">Datos</h2>
+      <div class="contenido">
+        <h2 class="sub-titulo">Alta de Empleado</h2>
+        <form id="formAlta">
+          <div class="contenedor">
+            <div class="caja">
+              <label for="name">Nombre</label>
+              <input
+                type="text"
+                class="entrada"
+                id="name"
+                maxlength="30"
+                required
+              />
+              <label for="cedula">Cedula</label>
+              <input type="number" class="entrada" id="cedula" required />
+              <label for="departamento">Departamento</label>
+              <select id="departamento" class="entrada">
+                <option value="Artigas" selected>Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandu">Paysandú</option>
+                <option value="RrioNegro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="SanJose">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Ttacuarembo">Tacuarembó</option>
+                <option value="Treinta y Tres">Treinta y tres</option>
+              </select>
+              <label for="edad">Edad</label>
+              <input type="number" class="entrada" id="edad" required />
+            </div>
+            <input class="agregar" type="button" value="Agregar" id="agregarEmpleado"/><br /><br />
+          </div>
+        </form>
+
+        <h2 class="subTitulo">Alta de Rubro</h2>
+        <form id="formRubro">
+          <div class="contenedor">
+            <div class="caja">
+              <label for="nameRubro">Nombre</label>
+              <input
+                type="text"
+                class="entrada"
+                id="nameRubro"
+                maxlength="30"
+                required
+              />
+              <label for="desc">Descripción</label>
+              <input
+                type="text"
+                class="entrada"
+                id="desc"
+                maxlength="30"
+                required
+              />
+            </div>
+            <input class="agregar" type="button" value="Agregar" id="agregarRubro"/><br /><br />
+          </div>
+        </form>
+
+        <h2 class="subTitulo">Alta de Oferta</h2>
+        <form id="formOferta">
+          <div class="contenedor">
+            <div class="caja">
+              <label for="empleadoOferta">Empleado</label>
+              <select id="empleadoOferta" class="entrada">
+                <option value="dato">Sin datos</option>
+              </select>
+              <label for="rubroOferta">Rubro</label>
+              <select id="rubroOferta" class="entrada">
+                <option value="dato">Sin Datos</option>
+              </select>
+              <label for="detalle">Detalle</label>
+              <input
+                type="text"
+                class="entrada"
+                id="detalle"
+                maxlength="30"
+                required
+              />
+              <label for="precio">Precio</label>
+              <input type="number" class="entrada" id="precio" required />
+            </div>
+            <input class="agregar" type="button" value="Agregar" id="agregarOferta"/><br /><br />
+          </div>
+        </form>
+
+        <h2 class="subTitulo">Baja de Oferta</h2>
+        <form id="formBaja">
+          <div class="contenedor">
+            <div class="caja">
+              <label for="ofertaElegida">Oferta</label>
+              <select id="ofertaElegida" class="entrada">
+                <option value="dato-oferta">Sin datos</option></select
+              ><br />
+            </div>
+            <input class="agregar" type="button" value="Borrar" id="borrarOferta"/><br /><br />
+          </div>
+        </form>
+      </div>
+    </section>
+
+    <section id="consultas-seccion">
+      <h2 class="titulo-seccion">Consultas</h2>
+      <div class="contenido">
+        <h2 class="sub-titulo">Ofertas de un rubro</h2>
+
+        <form id="elegir-rubro">
+          <div class="contenedor-rubro">
+            <div class="caja-rubro">
+              <label for="rubro-consulta">Rubro</label>
+              <div class="prueba">
+                <select id="rubro-consulta" class="entrada">
+                  <option value="rubro-oferta">Sin datos</option>
+                </select>
+                <input
+                  class="agregar"
+                  type="button"
+                  value="Consultar"
+                  id="consultar"
+                />
+              </div>
+            </div>
+          </div>
+        </form>
+
+        <p id="p-orden">Orden:</p>
+        <form class="elegir-orden">
+          <div class="contenedor-orden">
+            <div class="caja-orden">
+              <div id="radioPrecio">
+                <input
+                  type="radio"
+                  class="entrada"
+                  name="orden"
+                  id="radioPrecioCreciente"
+                  checked
+                />
+                <label for="creciente">precio creciente</label>
+              </div>
+              <div id="radioDepto"></div>
+              <input type="radio" class="entrada" name="orden" id="radioDepartamento" />
+              <label for="decreciente">nombre departamento creciente</label>
+            </div>
+          </div>
+        </form>
+
+        <div class="info">
+          <p class="parrafo"><b>Rubro:</b></p>
+          <p class="parrafo" id="parrafoNombreRubro"><b>Sin datos</b></p>
+          <p class="parrafo"><b>Promedio:</b></p>
+          <p class="parrafo" id="parrafoPromedio"><b>Sin datos</b></p>
+        </div>
+        <br /><br />
+
+        <table id="tablaRubro">
+          <thead>
+            <th>Nombre Empleado</th>
+            <th>Departamento</th>
+            <th>Detalle de la oferta</th>
+            <th>Precio</th>
+            <th>Tipo</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+
+        <h2 class="sub-titulo">Rubros con Máxima Cantidad de Ofertas</h2>
+        <ul id="lista-cantidad-ofertas">
+          <li><b>Sin Datos</b></li>
+        </ul>
+        <h2 class="sub-titulo">Rubros sin Ofertas</h2>
+        <ul id="lista-sin-ofertas">
+          <li><b>Sin Datos</b></li>
+        </ul>
+        <h2 class="sub-titulo">Tabla de Empleados</h2>
+
+        <table id="tablaEmpleado">
+          <thead>
+            <th>Nombre Empleado</th>
+            <th>Cédula</th>
+            <th>Departamento</th>
+            <th>Edad</th>
+            <th>Cantidad de ofertas</th>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section id="equipo-seccion">
+      <h2 class="titulo-seccion">Conozca al Equipo</h2>
+      <div class="contenido">
+        <div class="equipo">
+          <h2>Primer Integrante</h2>
+          <img
+            src="img/participante1.jpg"
+            alt="Sebastian"
+            width="60"
+            height="60"
+            class="foto"
+          />
+          <a
+            href="https://www.linkedin.com/in/sebasti%C3%A1n-vega-88410223b/"
+            target="_blank"
+            ><img
+              src="img/linkedin.png"
+              alt="Linkedin"
+              width="60"
+              height="60"
+              class="foto"
+          /></a>
+          <p class="nombre">Sebastián Vega (Número de estudiante: 281835)</p>
+          <h2>Segundo Integrante</h2>
+          <img
+            src="img/participante2.jpg"
+            alt="Rodrigo"
+            width="60"
+            height="60"
+            class="foto"
+          />
+          <a
+            href="https://www.linkedin.com/in/rodrigo-rey-455394234/"
+            target="_blank"
+            ><img
+              src="img/linkedin.png"
+              alt="Linkedin"
+              width="60"
+              height="60"
+              class="foto"
+          /></a>
+          <p class="nombre">Rodrigo Rey (Número de estudiante: 275635)</p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <p>
+        Programaci&oacute;n I - Obligatorio 1er. semestre 2022 - Universidad ORT
+        Uruguay
+      </p>
+    </footer>
+  </body>
+</html>
